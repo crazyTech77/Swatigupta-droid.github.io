@@ -1,8 +1,7 @@
 body
 {
     font-family: 'poppins',sans serif;
-    background-color: blackalmond;
-    color: rgb(240, 216, 180);
+    color: rgb(223 164 76);
 }
 
 #nav{
@@ -20,4 +19,88 @@ img#avatar_url {
 
 .avatar {
     text-align: center;
+}
+
+/* Dark mode */
+
+
+/* Light Mode Button Styles
+--------------------------- */
+
+.light-mode-button {
+    background: 0;
+    border: 0;
+    box-sizing: border-box;
+    cursor: pointer;
+    height: 40px;
+    width: 100px;
+    position: relative;
+    border: 1px solid rgba(255, 255, 255, 0);
+    margin-top: 20px;
+}
+
+.light-mode-button:focus {
+    outline: none; /* Not ideal for accessibility */
+}
+
+.light-mode-button span:nth-child(1) {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 42px;
+    height: 20px;
+    border-radius: 20px;
+    background-color: #d6d7db;
+    box-shadow: inset 1px 1px 3px 0 rgb(0 0 0 / 40%);
+    transition: 0.3s;
+}
+
+.light-mode-button span:nth-child(2) {
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    width: 15px;
+    height: 15px;
+    background-color: #fff;
+    border-radius: 50%;
+    box-shadow: 1px 1px 2px 0 rgb(0 0 0 / 40%);
+    transition: 0.3s;
+}
+
+/* Light & Dark Mode Styles
+		--------------------------- */
+
+body {
+    background-color: #f6f6f6;
+    transition: background-color 0.3s;
+}
+
+body[light-mode="dark"] {
+    background-color: #141516;
+    color: #ced4e2;
+}
+
+body[light-mode="dark"] .light-mode-button span:nth-child(1) {
+    background-color: #ced4e2;
+    color: #141516;
+}
+
+body[light-mode="dark"] .light-mode-button span:nth-child(2) {
+    left: 24px;
+    background-color: #141516;
+}
+
+body[light-mode="dark"] a {
+    color: #141516;
+}
+
+span.toggle {
+    position: absolute;
+    right: 50px;
+}
+
+@media only screen and (max-width:768px){
+    span.toggle {
+        right: 20px;
+    }
 }
