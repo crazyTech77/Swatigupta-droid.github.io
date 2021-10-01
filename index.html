@@ -20,11 +20,23 @@
         <script src="script.js"></script>
         <link rel="stylesheet" href="styles.css">
     </head>
+    <script>
+        var app = document.getElementsByTagName("BODY")[0];
+        if (localStorage.lightMode == "dark") {
+            app.setAttribute("light-mode", "dark");
+        }
+    </script>
     <body>
         <!-- Navbar -->
         <nav class="navbar navbar-light bg-light shadow mb-4" id="nav">
             <div class="container-fluid justify-content-center">
                 <span class="navbar-brand mb-0 h1">Alternate Github Profile</span>
+                <span class="toggle">
+                    <button class="light-mode-button" aria-label="Toggle Light Mode" onclick="toggle_light_mode()">
+                        <span></span>
+                        <span></span>
+                    </button>
+                </span>
             </div>
         </nav>
         <!-- Container -->
