@@ -1,160 +1,151 @@
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,200&display=swap"
- rel="stylesheet">
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" 
-rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We"
- crossorigin="anonymous">
- <link rel="stylesheet" href="styles.css">
-    <title>Alternate github profile</title>
-    <script src="https://code.jquery.com/jquery-2.2.4.min.js" 
-    integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" 
-    crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" 
-integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" 
-crossorigin="anonymous"></script>
-<script src="script.js"></script>
-</head>
-
-<body>
-    <nav class="navbar navbar-light bg-light shadow mb-4">
-        <div class="container-fluid justify-content-center">
-            <span class="navbar-brand mb-0 h1">Alternate Github Profile</span>
-        </div>
-    </nav>
-
-    <div class="container">
-        <div class="row">
-            <div class="col-4 ">
-                <form onsubmit="return false;">
-                    <div class="mb-3">
-                      <label for="github-username" class="form-label">
-                          Github Username
-                      </label>
-                      <input 
-                      type="email" 
-                      class="form-control" 
-                      id="github-username" 
-                      aria-describedby="GithubUsernameHelp"
-                      />
-                      <div id="GithubUsernameHelp" class="form-text">We'll fetch your details from this username.</div>
-                    </div>
-                    <button type="submit" id="check"class="btn btn-success " disabled="disabled">Check</button>
-                    <button type="button" id="fetch" class="btn btn-success" disabled="disabled">Fetch</button>
-                    </form>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,200&display=swap"
+        rel="stylesheet">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" 
+        rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We"
+        crossorigin="anonymous">
+        <link rel="stylesheet" href="styles.css">
+        <title>Alternate github profile</title>
+        <script src="https://code.jquery.com/jquery-2.2.4.min.js" 
+        integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" 
+        crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" 
+        integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" 
+        crossorigin="anonymous"></script>
+        <script src="script.js"></script>
+    </head>
+    <body>
+        <!-- Navbar -->
+        <nav class="navbar navbar-light bg-light shadow mb-4">
+            <div class="container-fluid justify-content-center">
+                <span class="navbar-brand mb-0 h1">Alternate Github Profile</span>
             </div>
-            <div class="col-8 ">
-                <div class="NoUsername">
-                    <p>Please enter your username in the left and start by clicking on the check button. </p>
-                </div>
-                <div class="WrongUsername">
-                    <p>Oops! Even Github doesn't have your details.</p>
-                </div>
-                <div class="IncompleteUsername">
-                    <p>Sorry, I am not going to enable the fetch button unless you complete the following in your github profile</p>
-                    <ul>
-                        <li>login</li>
-                        <li>avatar_url</li>
-                        <li>name</li>
-                        <li>company</li>
-                        <li>blog</li>
-                        <li>location</li>
-                        <li>bio</li>
-                        <li>twitter_username</li>
-                    </ul>
-                </div>
-                <div class="EverythingRight">
-                    <p>Everything is right! Click on the fetch button</p>
-                </div>
-                <div class="Fetched ">
-                    <div class="flex-d">
-                        <div class="avatar">
-                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSm149p-IL_yAGeujDMyuyui5JRlGsBeJih9g&usqp=CAU" 
-                        class="img-thumbnail" alt="user name" id="avatar_url" />
+        </nav>
+        <!-- Container -->
+        <div class="container">
+            <div class="row">
+                <!-- Left section -->
+                <div class="col-4 ">
+                    <!-- Username form -->
+                    <form onsubmit="return false;">
+                        <div class="mb-3">
+                            <label for="github-username" class="form-label">
+                                Github Username
+                            </label>
+                            <input 
+                                type="email" 
+                                class="form-control" 
+                                id="github-username" 
+                                aria-describedby="GithubUsernameHelp"
+                            />
+                            <div id="GithubUsernameHelp" class="form-text">
+                                We'll fetch your details from this username.
+                            </div>
                         </div>
-                        
-                        <div class="flex-grow-1 ps-3">
-                            <p>Hello <span id="name"></span>,nice that you have been fetched.Here's your details</p>
-                           
-                        </div>
-
+                        <button type="submit" id="check"class="btn btn-success " disabled="disabled">Check</button>
+                        <button type="button" id="fetch" class="btn btn-success" disabled="disabled">Fetch</button>
+                    </form>
+                </div>
+                <!-- Right section -->
+                <div class="col-8 ">
+                    <!-- Wrong details section -->
+                    <div class="NoUsername">
+                        <p>Please enter your username in the left and start by clicking on the check button. </p>
                     </div>
-                    
-                    <div class="list-group mt-3">
+                    <div class="WrongUsername">
+                        <p>Oops! Even Github doesn't have your details.</p>
+                    </div>
+                    <div class="IncompleteUsername">
+                        <p>Sorry, I am not going to enable the fetch button unless you complete the following in your github profile</p>
+                        <ul>
+                            <li>login</li>
+                            <li>avatar_url</li>
+                            <li>name</li>
+                            <li>company</li>
+                            <li>blog</li>
+                            <li>location</li>
+                            <li>bio</li>
+                            <li>twitter_username</li>
+                        </ul>
+                    </div>
+                    <!-- Right details section -->
+                    <div class="EverythingRight">
+                        <p>Everything is right! Click on the fetch button</p>
+                    </div>
+                    <div class="Fetched ">
+                        <div class="flex-d">
+                            <div class="avatar">
+                                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSm149p-IL_yAGeujDMyuyui5JRlGsBeJih9g&usqp=CAU" 
+                                class="img-thumbnail" alt="user name" id="avatar_url" />
+                            </div>
+                            <div class="flex-grow-1 ps-3">
+                                <p>Hello <span id="name"></span>,nice that you have been fetched.Here's your details</p>
+                            </div>
+                        </div>
+                        <div class="list-group mt-3">
+                            <div class="list-group-item">
+                                <div class="d-flex w-100 justify-content-between">
+                                    <h5 class="mb-1" id="Name">Loading Name..</h5>
+                                </div>
+                                <p class="mb-1">Name</p>
+                            </div>
+                            <div class="list-group-item">
+                                <div class="d-flex w-100 justify-content-between">
+                                    <h5 class="mb-1" id="Company">Loading Company..</h5>
+                                </div>
+                                <p class="mb-1">Company</p>
+                            </div>
+                            <div class="list-group-item">
+                                <div class="d-flex w-100 justify-content-between">
+                                    <h5 class="mb-1" id="hireable">Loading Hireable..</h5>
+                                </div>
+                                <p class="mb-1">Hireable</p>
+                            </div>
+                            <div class="list-group-item">
+                                <div class="d-flex w-100 justify-content-between">
+                                    <h5 class="mb-1" id="username">Loading Username..</h5>
+                                </div>
+                                <p class="mb-1">Username</p>
+                            </div>
+                            <div class="list-group-item">
+                                <div class="d-flex w-100 justify-content-between">
+                                    <h5 class="mb-1" id="avatar_url">Loading avatar..</h5>
+                                </div>
+                                <p class="mb-1">Avatar url</p>
+                            </div>
+                            <div class="list-group-item">
+                                <div class="d-flex w-100 justify-content-between">
+                                    <h5 class="mb-1" id="blog">Loading blog..</h5>
+                                </div>
+                                <p class="mb-1">Blog</p>
+                            </div>
                         <div class="list-group-item">
                             <div class="d-flex w-100 justify-content-between">
-                                <h5 class="mb-1" id="Name">Loading Name..</h5>
-                              </div>
-                              <p class="mb-1">Name</p>
-                            
+                                <h5 class="mb-1" id="location">Loading location..</h5>
+                            </div>
+                            <p class="mb-1">Location</p>
+                        </div>
+                        <div class="list-group-item">
+                            <div class="d-flex w-100 justify-content-between">
+                                <h5 class="mb-1" id="bio">Loading bio..</h5>
+                            </div>
+                            <p class="mb-1">Bio</p>
+                        </div>
+                        <div class="list-group-item">
+                            <div class="d-flex w-100 justify-content-between">
+                                <h5 class="mb-1" id="twitter_username">Loading twitter username..</h5>
+                            </div>
+                            <p class="mb-1">Twitter Username</p>
+                        </div>
                     </div>
-                    <div class="list-group-item">
-                        <div class="d-flex w-100 justify-content-between">
-                            <h5 class="mb-1" id="Company">Loading Company..</h5>
-                          </div>
-                          <p class="mb-1">Company</p>
-                        
-                </div>
-                <div class="list-group-item">
-                    <div class="d-flex w-100 justify-content-between">
-                        <h5 class="mb-1" id="hireable">Loading Hireable..</h5>
-                      </div>
-                      <p class="mb-1">Hireable</p>
-                    
-            </div>
-                <div class="list-group-item">
-                    <div class="d-flex w-100 justify-content-between">
-                        <h5 class="mb-1" id="username">Loading Username..</h5>
-                      </div>
-                      <p class="mb-1">Username</p>
-                    
-            </div>
-            <div class="list-group-item">
-                <div class="d-flex w-100 justify-content-between">
-                    <h5 class="mb-1" id="avatar_url">Loading avatar..</h5>
-                  </div>
-                  <p class="mb-1">Avatar url</p>
-                
-        </div>
-        <div class="list-group-item">
-            <div class="d-flex w-100 justify-content-between">
-                <h5 class="mb-1" id="blog">Loading blog..</h5>
-              </div>
-              <p class="mb-1">Blog</p>
-            
-    </div>
-    <div class="list-group-item">
-        <div class="d-flex w-100 justify-content-between">
-            <h5 class="mb-1" id="location">Loading location..</h5>
-          </div>
-          <p class="mb-1">Location</p>
-        
-</div>
-<div class="list-group-item">
-    <div class="d-flex w-100 justify-content-between">
-        <h5 class="mb-1" id="bio">Loading bio..</h5>
-      </div>
-      <p class="mb-1">Bio</p>
-    
-</div>
-<div class="list-group-item">
-    <div class="d-flex w-100 justify-content-between">
-        <h5 class="mb-1" id="twitter_username">Loading twitter username..</h5>
-      </div>
-      <p class="mb-1">Twitter Username</p>
-    
-</div>
-
-                </div>
                 </div>
             </div>
         </div>
-    </div>
-
-</body>
+    </body>
 </html>
