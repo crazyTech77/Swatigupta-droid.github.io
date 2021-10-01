@@ -4,3 +4,20 @@ body
     background-color: blackalmond;
     color: rgb(240, 216, 180);
 }
+
+#nav{
+    margin-bottom: 50px !important;
+}
+
+#again{
+    margin: 5px;
+}
+
+img#avatar_url {
+    margin-bottom: 20px;
+    border-radius: 100%;
+}
+
+.avatar {
+    text-align: center;
+}

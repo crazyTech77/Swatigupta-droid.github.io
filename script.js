@@ -49,11 +49,17 @@ $(function ()
                 //profile is incomplete
                 resetMessages();
                 $(".IncompleteUsername").fadeIn();
+                $("#fetch").after(
+                    '<button type="button" class="btn btn-primary" id="again" onclick="location.reload();">Again</button>'
+                );
             }
         }
         ).fail(function() {
             resetMessages();
             $(".WrongUsername").fadeIn();
+            $('#fetch').after(
+                '<button type="button" class="btn btn-primary" id="again" onclick="location.reload();">Again</button>'
+            );
         });
        
     });
@@ -71,8 +77,9 @@ $(function ()
         $("#twitter_username").text(FetchedDetails.twitter_username);
         resetMessages();
         $(".Fetched").fadeIn();
+        $("#fetch").prop("disabled",true);
         $(this).after(
-            '<button type="button" class="btn btn-primary" onclick="location.reload();">Again</button>'
-            );
+            '<button type="button" class="btn btn-primary" id="again" onclick="location.reload();">Again</button>'
+        );
     });
 });
