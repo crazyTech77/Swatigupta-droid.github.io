@@ -63,6 +63,9 @@ $(function ()
         });
        
     });
+    const name=() =>{
+        console.log("new request")
+    }
 
     $("#fetch").click(function(e){
         e.preventDefault();
